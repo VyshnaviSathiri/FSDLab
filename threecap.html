@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Event Capturing</title>
+        <style>
+        div{
+        border:1px solid #ccc;
+        padding:10px;
+        margin:10px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="parent">
+            <div id="Child">Click Me!</div>
+        </div>
+        <script>
+            document.getElementById("parent").addEventListener('click',function(){
+                alert('parent Div clicked(Capturing)');
+            },true);
+            document.getElementById("Child").addEventListener('click',function(){
+                alert('Child Div clicked(Capturing)');
+            },true);
+        </script>
+    </body>
+</html>
